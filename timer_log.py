@@ -3,8 +3,7 @@ import time
 from collections import Counter
 from functools import wraps
 
- #Define a decorator function
- 
+#Decorator function
 logging.basicConfig()
 logger = logging.getLogger("my-logger")
 logger.setLevel(logging.DEBUG)
@@ -24,9 +23,8 @@ def timed(func):
 
     return wrapper
 
-#count the number of appearances of each word in this text
+#functions to count the number of appearances of each word in this text
 
-#With dictionnary 
 def count_dict(file):
     word_dict ={}
     with open(file , encoding = 'utf8') as f:
