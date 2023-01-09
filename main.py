@@ -35,11 +35,11 @@ def google_trend():
 def experiment():
   dictionary , function = run_100times()
 
-  dictionnary_mean = str("dictionnary mean : ",np.mean(dictionary))
-  counter_mean= str("Function mean : ",np.mean(function))
+  d_mean = str("dictionnary mean : ",np.mean(dictionary))
+  c_mean= str("Function mean : ",np.mean(function))
 
-  dictionnary_var = str("dictionnary variance : ",np.std(dictionary))
-  counter_var= str("Function variance : ",np.std(function))
+  d_var = str("dictionnary variance : ",np.std(dictionary))
+  c_var= str("Function variance : ",np.std(function))
 
   x = np.linspace(0,100, 100)
 
@@ -58,7 +58,7 @@ def experiment():
   chart = base64.b64encode(B.getvalue()).decode()
   plt.clf()
 
-  return dictionnary_mean,counter_mean,dictionnary_var,counter_var,'<img src="data:image/png;base64,{}">'.format(chart)
+  return d_mean,c_mean,d_var,c_var,'<img src="data:image/png;base64,{}">'.format(chart)
 
 @app.route('/countDict', methods=["GET"])
 @timed
