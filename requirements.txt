@@ -1,8 +1,8 @@
 Flask
+matplotlib
 requests
 pytrends
 requires.io
 pybase64
-matplotlib
 numpy
 pandas
